@@ -9,7 +9,7 @@ const Products = () => {
     <Grid container className="productsPage">
       {data.products.map((product) => {
         return (
-          <Grid item key={product.item_id} xs={10} sm={6} md={3}>
+          <Grid>
             <CardProduct
               key={product.item_id}
               img={product.img}
@@ -20,6 +20,7 @@ const Products = () => {
               rate={product.rate}
               review={product.reviews}
               colors={product.colors}
+              colorsImage={product.colorsImg}
             />
           </Grid>
         );

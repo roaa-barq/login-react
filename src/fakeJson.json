@@ -20,6 +20,14 @@
         { "id": "4", "color": "./card1/green.jfif" },
         { "id": "5", "color": "./card1/navy.jfif" },
         { "id": "6", "color": "./card1/orange.jfif" }
+      ],
+      "colorsImg": [
+        { "id": "1", "colorImg": "./card1/card1-black.jfif" },
+        { "id": "2", "colorImg": "./card1/card1-blue.jfif" },
+        { "id": "3", "colorImg": "./card1/card1-aqua.jfif" },
+        { "id": "4", "colorImg": "./card1/card1-green.jfif" },
+        { "id": "5", "colorImg": "./card1/card1-navy.jfif" },
+        { "id": "6", "colorImg": "./card1/card1-orange.jfif" }
       ]
     },
 
@@ -38,6 +46,14 @@
         { "id": "4", "color": "./card1/green.jfif" },
         { "id": "5", "color": "./card1/navy.jfif" },
         { "id": "6", "color": "./card1/orange.jfif" }
+      ],
+      "colorsImg": [
+        { "id": "1", "colorImg": "./card2/card2-black.jfif" },
+        { "id": "2", "colorImg": "./card2/card2-blue.jfif" },
+        { "id": "3", "colorImg": "./card2/card2-aqua.jfif" },
+        { "id": "4", "colorImg": "./card2/card2-main.jfif" },
+        { "id": "5", "colorImg": "./card2/card2-navy.jfif" },
+        { "id": "6", "colorImg": "./card2/card2-orange.jfif" }
       ]
     },
 
@@ -56,6 +72,14 @@
         { "id": "4", "color": "./card3/card3-green.jfif" },
         { "id": "5", "color": "./card3/card3-navy.jfif" },
         { "id": "6", "color": "./card3/card3-pink.jfif" }
+      ],
+      "colorsImg": [
+        { "id": "1", "colorImg": "./card3/card3-beige.jfif" },
+        { "id": "2", "colorImg": "./card3/card3-white.jfif" },
+        { "id": "3", "colorImg": "./card3/card3-aqua.jfif" },
+        { "id": "4", "colorImg": "./card3/card3-green.jfif" },
+        { "id": "5", "colorImg": "./card3/card3-navy.jfif" },
+        { "id": "6", "colorImg": "./card3/card3-pink.jfif" }
       ]
     },
 
@@ -74,6 +98,14 @@
         { "id": "4", "color": "./card1/green.jfif" },
         { "id": "5", "color": "./card1/navy.jfif" },
         { "id": "6", "color": "./card1/orange.jfif" }
+      ],
+      "colorsImg": [
+        { "id": "1", "colorImg": "./card4/card4-black.jfif" },
+        { "id": "2", "colorImg": "./card4/card4-main.jfif" },
+        { "id": "3", "colorImg": "./card4/card4-aqua.jfif" },
+        { "id": "4", "colorImg": "./card4/card4-green.jfif" },
+        { "id": "5", "colorImg": "./card4/card4-navy.jfif" },
+        { "id": "6", "colorImg": "./card4/card4-orange.jfif" }
       ]
     }
   ]

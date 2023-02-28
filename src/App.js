@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import { EmailContext } from "./components/Context";
 import { useState, useEffect, useMemo } from "react";
 import Products from "./components/Products";
+import { InfoPage } from "./components/InfoPage";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<LoginPage />}></Route>
             <Route path="/home" element={<Home />}></Route>
             <Route path="/products" element={<Products />}></Route>
+            <Route path="/info" element={<InfoPage />}></Route>
           </Routes>
         </BrowserRouter>
         <Footer />

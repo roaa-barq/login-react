@@ -18,6 +18,10 @@ const Home = () => {
     navigate("../products");
   };
 
+  const info = () => {
+    navigate("../info");
+  };
+
   if (auth) {
     return (
       <form className="homePage">
@@ -43,8 +47,8 @@ const Home = () => {
             <div>Our products</div>
             <img src="/book.png" />
           </div>
-          <div className="button">
-            <div>Pro Support</div>
+          <div onClick={info} className="button">
+            <div>Info Page</div>
             <img src="/support.png" />
           </div>
         </div>

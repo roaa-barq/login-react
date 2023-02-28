@@ -1,99 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "@material-ui/core/Card";
 import "./Card.css";
 import {
-  CardActions,
   CardMedia,
   Typography,
   CardContent,
   CardActionArea,
   Button,
-  Container,
-  makeStyles,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import Rating from "material-ui-rating";
-
-const useStyles = makeStyles((props) => ({
-  card: {
-    borderRadius: "0",
-    margin: "20px",
-    height: "600px",
-  },
-  img: {
-    position: "absolute",
-  },
-
-  hoverImg: {
-    position: "absolute",
-    opacity: "0",
-    "&:hover": {
-      opacity: "1",
-    },
-  },
-  imgColor: {
-    height: "20px",
-    width: "20px",
-  },
-  rate: {
-    color: "#2979ff",
-  },
-  button: {
-    backgroundColor: "lightgrey",
-    textTransform: "capitalize",
-    height: "25px",
-  },
-  viewer: {
-    fontSize: "14px",
-    textTransform: "capitalize",
-  },
-  link: {
-    color: "black",
-    textDecoration: "none",
-    "&:hover": {
-      color: "grey",
-      textDecoration: "underline",
-    },
-  },
-  price: {
-    paddingTop: "30px",
-  },
-  label: {
-    fontSize: "12px",
-    color: "#424242",
-    paddingBottom: "10px",
-  },
-}));
+import { useStyles } from "./UseStyles";
+import { useState } from "react";
 
 export default function CardProduct(props) {
-  const classes = useStyles(props.imgHover);
+  const [img, setImg] = useState(props.img);
+  const classes = useStyles();
+
+  const mainImg = () => {
+    setImg(props.img);
+  };
+
+  const changeImg = () => {
+    setImg(props.imgHover);
+  };
+  const ColorsImg = (props) => {
+    const classes = useStyles();
+    return (
+      <div className="colorsImg">
+        {props.colors.map((color) => {
+          function changeImgById() {
+            var e = color.id;
+            const image = props.imgs.find((item) => item.id === color.id);
+            setImg(image.colorImg);
+          }
+          return (
+            <CardMedia
+              className={classes.imgColor}
+              component="img"
+              key={color.id}
+              image={color.color}
+              id={color.id}
+              onMouseOver={changeImgById}
+              onMouseLeave={mainImg}
+            ></CardMedia>
+          );
+        })}
+      </div>
+    );
+  };
   return (
     <div>
       <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
-            className={classes.hoverImg}
             component="img"
             height="400"
-            image={props.imgHover}
+            image={img}
+            onMouseOver={changeImg}
+            onMouseLeave={mainImg}
           />
-          <CardMedia component="img" height="400" image={props.img} />
-
           <CardContent>
             <Typography className={classes.label}>NEW COLOR</Typography>
             <div className="grid">
-              <div className="colorsImg">
-                {props.colors.map((color) => {
-                  return (
-                    <CardMedia
-                      className={classes.imgColor}
-                      component="img"
-                      key={color.id}
-                      image={color.color}
-                    ></CardMedia>
-                  );
-                })}
-              </div>
+              <ColorsImg colors={props.colors} imgs={props.colorsImage} />
               <Button className={classes.button} variant="contained">
                 More
               </Button>

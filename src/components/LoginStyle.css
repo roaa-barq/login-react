@@ -59,3 +59,11 @@ h1 {
   background-color: whitesmoke;
   border: solid black 2px;
 }
+
+.infoLabel {
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+}

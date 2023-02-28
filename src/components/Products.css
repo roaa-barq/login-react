@@ -1,5 +1,4 @@
 .productsPage {
-  height: 80vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -9,15 +8,4 @@
 
 .card {
   margin: 10px;
-}
-
-@media screen and (max-width: 80vh) {
-  .productsPage {
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
 }
